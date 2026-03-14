@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+        int X = sc.nextInt();
+        
+        int result = X / 500;
+        X %= 500;
+        
+        result += X/100;
+        X %= 100;
+        
+        result += X/50;
+        X %= 50;
+        
+        result += X/10;
+        X %= 10;
+        
+        result += X/5;
+        X %= 5;
+        
+        result += X;
+        X %= 1;
+        
+        System.out.println(result);
+    }
+}
